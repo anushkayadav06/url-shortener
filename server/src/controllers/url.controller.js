@@ -1,3 +1,4 @@
+const pool = require("../config/db");
 const validator = require("validator");
 const { shortenUrl } = require("../services/shorten.service");
 const { resolveUrl, logClick } = require("../services/redirect.service");

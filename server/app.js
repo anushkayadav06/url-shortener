@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({ origin: "*", credentials: true }));
 app.use(express.json());
 
 const pool = require("./src/config/db");
@@ -23,6 +23,10 @@ app.use("/api/analytics", analyticsRoutes);
 
 // health check
 app.get("/health", (req, res) => res.json({ status: "ok" }));
+
+// redirect route — must be after all other routes
+const { redirectUrl } = require("./src/controllers/url.controller");
+app.get("/:shortCode", redirectUrl);
 
 // error middleware — always last
 app.use((err, req, res, next) => {

@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "./UrlCard.css";
 
+const BASE_URL = "http://3.227.8.126:5000";
+
 const UrlCard = ({ url, onDelete }) => {
     const navigate = useNavigate();
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`http://localhost:5000/${url.short_code}`);
+        navigator.clipboard.writeText(`${BASE_URL}/${url.short_code}`);
         alert("Copied to clipboard!");
     };
 
@@ -13,8 +15,7 @@ const UrlCard = ({ url, onDelete }) => {
         <div className="url-card">
             <div className="url-card-left">
                 <p className="url-short">
-                    http://localhost:5000/
-                    <span>{url.short_code}</span>
+                    {BASE_URL}/<span>{url.short_code}</span>
                 </p>
                 <p className="url-original">{url.original_url}</p>
                 <p className="url-date">

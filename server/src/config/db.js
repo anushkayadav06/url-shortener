@@ -6,10 +6,13 @@ const pool = new Pool({
   database: process.env.DB_NAME,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-  max: 10, // connection pool
+  max: 10,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 pool.on("connect", () => console.log("PostgreSQL connected"));
-pool.on("error", (err) => console.error("PG error", err));
+pool.on("error", (err) => console.error("PG error:", err));
 
 module.exports = pool;
