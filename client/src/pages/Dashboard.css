@@ -1,0 +1,88 @@
+.dashboard-container {
+    min-height: 100vh;
+    background: #f5f7fa;
+}
+
+.dashboard-main {
+    max-width: 820px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    color: #1f2937;
+}
+
+.shorten-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.shorten-input:focus {
+    border-color: #6366f1;
+}
+
+.shorten-btn {
+    width: 100%;
+    padding: 0.875rem;
+    background: #6366f1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.shorten-btn:hover {
+    background: #4f46e5;
+}
+
+.shorten-btn:disabled {
+    background: #a5b4fc;
+    cursor: not-allowed;
+}
+
+.shorten-error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    background: #fef2f2;
+    border-radius: 6px;
+}
+
+.shorten-success {
+    color: #10b981;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    background: #f0fdf4;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.urls-empty {
+    color: #9ca3af;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+}

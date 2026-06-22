@@ -1,0 +1,84 @@
+.url-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    background: #fafafa;
+    transition: box-shadow 0.2s;
+}
+
+.url-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.url-card-left {
+    flex: 1;
+    min-width: 0;
+}
+
+.url-short {
+    margin: 0 0 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+.url-short span {
+    color: #6366f1;
+    font-weight: 700;
+}
+
+.url-original {
+    margin: 0 0 0.25rem;
+    font-size: 0.8rem;
+    color: #9ca3af;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+}
+
+.url-date {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #d1d5db;
+}
+
+.url-card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    flex-shrink: 0;
+}
+
+.btn {
+    padding: 0.4rem 0.85rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-copy {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.btn-analytics {
+    background: #10b981;
+    color: white;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+}

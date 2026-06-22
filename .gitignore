@@ -1,0 +1,18 @@
+# ── Server ──
+server/node_modules/
+server/.env
+server/.env.local
+
+# ── Client ──
+client/node_modules/
+client/.env
+client/dist/
+client/build/
+
+# ── General ──
+*.pem
+*.csv
+.DS_Store
+Thumbs.db
+npm-debug.log
+yarn-error.log
