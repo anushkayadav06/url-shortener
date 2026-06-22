@@ -7,15 +7,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const pool = require("./config/db");
-const redis = require("./config/redis");
+const pool = require("./src/config/db");
+const redis = require("./src/config/redis");
 
 pool.query("SELECT 1").then(() => console.log("DB ready"));
 redis.ping().then(() => console.log("Redis ready"));
 
-const authRoutes = require("./routes/auth.routes");
-const urlRoutes = require("./routes/url.routes");
-const analyticsRoutes = require("./routes/analytics.routes");
+const authRoutes = require("./src/routes/auth.routes");
+const urlRoutes = require("./src/routes/url.routes");
+const analyticsRoutes = require("./src/routes/analytics.routes");
 
 app.use("/api/auth", authRoutes);
 app.use("/api/urls", urlRoutes);
